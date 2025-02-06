@@ -1,10 +1,10 @@
 "use script"
 
 const disciplinas = [
-    'PPDM',
-    'PRO',
-    'PWBE',
-    'PWFE'
+    {nome:'PPDM', icon:'android.png'},
+    {nome:'PRO', icon:'projetos.png'},
+    {nome:'PWBE', icon:'web.png'},
+    {nome:'PWFE', icon:'dominio.png'}
 ]
 
 function criarMenu(disciplina){
@@ -16,8 +16,8 @@ function criarMenu(disciplina){
     const lista = document.getElementById('menu')
 
     //adionando conteúdo
-    novaImagem.src = "./img/android.png"
-    novoSpan.textContent = disciplina
+    novaImagem.src = `./img/${disciplina.icon}`
+    novoSpan.textContent = disciplina.nome
 
     //adicionando conteúdo na tag
     novoItem.appendChild(novaImagem)

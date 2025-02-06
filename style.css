@@ -28,7 +28,8 @@ a{
     gap: 4px;
     align-items: center;
     padding: 4px 8px;
-    transition: 5s;
+    transition: 1s;
+    border-radius: 10px;
 
 }
 
