@@ -1,3 +1,7 @@
+:root{
+    --cor-hover:white;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -34,9 +38,64 @@ a{
 }
 
 .menu li:hover{
-    background-color: red;
+    background-color: var(--cor-hover);
 }
 
 .menu img{
     height: 16px;
+}
+
+.container{
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.titulo h1 {
+    font-size: 13px;
+    border: 1px solid pink;
+    align-content: center;
+    align-items: center;
+    height: 30px;
+    text-align: center;
+}
+
+.descricao{
+    border: 1px solid purple;
+}
+
+.imagem img{
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.imagem{
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    border:1px solid red ;
+}
+
+.preco{
+    border: 1px solid yellow;
+}
+
+.duracao {
+    border: 1px solid green;
+}
+
+.adicionar {
+    border: 1px solid blue;
 }
