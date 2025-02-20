@@ -82,7 +82,7 @@ function criarCards(produto){
     const imagemImg = document.createElement('img')
 
     const preco = document.createElement('div')
-    preco.className = 'imagem'
+    preco.className = 'preco'
 
     const precoH1 = document.createElement('h1')
 
@@ -94,15 +94,17 @@ function criarCards(produto){
     const duracao = document.createElement('div')
     duracao.className = 'duracao'
 
-    const duracaoP = document.createElement('p')
+    //const duracaoP = document.createElement('p')
 
-    // //produto.duracao.forEach(function(item){
-    //     const div = document.createElement('div')
-    //     const p = document.createElement('p')
+    produto.duracao.forEach(function(item){
+        const div1 = document.createElement('div')
+        const p1 = document.createElement('p')
 
-    //     p.textContent = item
+        p1.textContent = item
 
-    // })
+        div1.appendChild(p1)
+        duracao.appendChild(div1)
+    })
 
     const adicionar = document.createElement('div')
     adicionar.className = 'adicionar'
@@ -115,7 +117,7 @@ function criarCards(produto){
     imagemImg.src = `./img2/${produto.imagem}`
     precoH1.textContent = `R$${produto.preco}`
     tituloDuracaoH2.textContent = 'Duração'
-    duracaoP.textContent = produto.duracao
+    //duracaoP.textContent = produto.duracao
     adicionarH1.textContent = 'ADD TO CARD'
 
     //adicionando a tag a classe
@@ -124,7 +126,7 @@ function criarCards(produto){
     imagem.appendChild(imagemImg)
     preco.appendChild(precoH1)
     tituloDuracao.appendChild(tituloDuracaoH2)
-    duracao.appendChild(duracaoP)
+    //duracao.appendChild(duracaoP)
     adicionar.appendChild(adicionarH1)
 
     //adicionando no pai
